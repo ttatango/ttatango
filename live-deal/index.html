@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بوابة الإقلاع | Onlinersv Live Deal</title>
+<meta name="description" content="بث مباشر على فيسبوك بعروض حصرية على باكجات العمرة والفنادق والتذاكر والرحلات السياحية — من فخامة البراء عبر onlinersv.com">
+<meta property="og:title" content="بوابة الإقلاع ✈️ عروض مباشرة لوقت محدود">
+<meta property="og:description" content="عمرة • فنادق • تذاكر • رحلات — سجّل الآن واحصل على وصول مبكر للعروض">
+<meta property="og:image" content="assets/onlinersv-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<!-- Meta Pixel: الصق كود البكسل هنا بعد إنشائه من Meta Events Manager -->
+<style>
+  :root {
+    --blue: #0b63d6;
+    --blue-dark: #0848a0;
+    --orange: #f7931e;
+    --orange-dark: #e07a00;
+    --navy: #0d1626;
+    --navy-2: #152238;
+    --gold: #e9c46a;
+    --ink: #13213a;
+    --muted: #5b6b84;
+    --bg: #f5f8fc;
+    --card: #ffffff;
+    --line: #dde5f0;
+    --board-text: #ffd166;
+    --green: #2ecc71;
+    --red: #ff5a5f;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Tajawal", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.7;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { width: min(1100px, 100% - 32px); margin-inline: auto; }
+
+  /* Header */
+  header.top {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 20;
+  }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; }
+  header.top img { height: 44px; width: auto; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    border: 0; border-radius: 999px; cursor: pointer;
+    font: 700 1rem "Tajawal", sans-serif;
+    padding: 12px 22px; text-decoration: none;
+    transition: transform .15s, box-shadow .15s, background .15s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-orange { background: var(--orange); color: #fff; box-shadow: 0 6px 18px rgba(247,147,30,.35); }
+  .btn-orange:hover { background: var(--orange-dark); }
+  .btn-blue { background: var(--blue); color: #fff; }
+  .btn-blue:hover { background: var(--blue-dark); }
+  .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.4); }
+  .btn-sm { padding: 8px 16px; font-size: .95rem; }
+
+  /* Hero */
+  .hero {
+    background:
+      radial-gradient(1000px 500px at 85% -10%, rgba(11,99,214,.45), transparent 60%),
+      radial-gradient(700px 400px at 0% 110%, rgba(247,147,30,.25), transparent 60%),
+      var(--navy);
+    color: #fff;
+    padding: 48px 0 56px;
+    overflow: hidden;
+  }
+  .live-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,90,95,.15); color: #ffb3b5;
+    border: 1px solid rgba(255,90,95,.4);
+    padding: 4px 14px; border-radius: 999px; font-weight: 700; font-size: .9rem;
+  }
+  .live-pill i { width: 9px; height: 9px; border-radius: 50%; background: var(--red); animation: pulse 1.4s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
+  .hero h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); line-height: 1.2; margin: 16px 0 8px; font-weight: 800; }
+  .hero h1 span { color: var(--orange); }
+  .hero p.lead { font-size: clamp(1.05rem, 2.6vw, 1.3rem); color: #c8d4e8; margin: 0 0 24px; max-width: 640px; }
+
+  .countdown { display: flex; gap: 10px; margin: 0 0 24px; flex-wrap: wrap; }
+  .countdown div {
+    background: #000; border: 1px solid #2a3a55; border-radius: 10px;
+    min-width: 74px; padding: 8px 6px; text-align: center;
+  }
+  .countdown b { display: block; font: 700 2rem "JetBrains Mono", monospace; color: var(--board-text); line-height: 1.2; }
+  .countdown small { color: #8fa1bf; font-size: .8rem; }
+  .when { color: #c8d4e8; margin: -12px 0 22px; font-size: .98rem; }
+  .when strong { color: #fff; }
+  .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* Departures board */
+  .board {
+    margin-top: 40px;
+    background: #05090f;
+    border-radius: 14px;
+    border: 1px solid #22314a;
+    box-shadow: 0 20px 50px rgba(0,0,0,.45);
+    overflow: hidden;
+  }
+  .board-head {
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--orange); color: #1a1000; padding: 10px 18px; font-weight: 800;
+  }
+  .board-head span:last-child { font: 700 .9rem "JetBrains Mono", monospace; direction: ltr; }
+  .board-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+  .board-table th {
+    text-align: right; color: #8fa1bf; font-weight: 500; font-size: .85rem;
+    padding: 10px 14px; border-bottom: 1px solid #1d2a40;
+  }
+  .board-table td { padding: 12px 14px; border-bottom: 1px dashed #1d2a40; color: var(--board-text); }
+  .board-table td.gate { font: 700 1.1rem "JetBrains Mono", monospace; color: #fff; }
+  .board-table td.time { font-family: "JetBrains Mono", monospace; direction: ltr; text-align: right; }
+  .status { font-weight: 700; font-size: .85rem; padding: 3px 10px; border-radius: 6px; white-space: nowrap; }
+  .status.soon { background: rgba(255,209,102,.12); color: var(--board-text); }
+  .status.locked { background: rgba(255,255,255,.06); color: #8fa1bf; }
+  .board-table tr:last-child td { border-bottom: 0; }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  .eyebrow { color: var(--orange-dark); font-weight: 800; font-size: .95rem; letter-spacing: .3px; }
+  h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 4px 0 10px; line-height: 1.3; }
+  .sub { color: var(--muted); margin: 0 0 32px; max-width: 680px; }
+
+  .deals { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .deal {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 22px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .deal .gate-tag {
+    position: absolute; top: 0; left: 0;
+    background: var(--navy); color: var(--board-text);
+    font: 700 .8rem "JetBrains Mono", monospace; padding: 6px 12px; border-bottom-right-radius: 12px;
+    direction: ltr;
+  }
+  .deal .icon { font-size: 2.2rem; line-height: 1; }
+  .deal h3 { margin: 6px 0 0; font-size: 1.3rem; }
+  .deal p { margin: 0; color: var(--muted); font-size: .98rem; }
+  .deal ul { margin: 6px 0 0; padding: 0 18px 0 0; color: var(--ink); font-size: .95rem; }
+  .deal .price {
+    margin-top: auto; padding-top: 14px; border-top: 1px dashed var(--line);
+    display: flex; justify-content: space-between; align-items: center; font-weight: 700;
+  }
+  .deal .price .blur { filter: blur(6px); user-select: none; color: var(--blue); font-size: 1.3rem; }
+  .deal .price small { color: var(--orange-dark); }
+  .deal.umrah { background: linear-gradient(180deg, #fffaf0, #fff); border-color: #f1e2bd; }
+  .deal.mystery { background: var(--navy); color: #fff; border-color: var(--navy-2); }
+  .deal.mystery p, .deal.mystery ul { color: #c8d4e8; }
+  .deal.mystery .gate-tag { background: var(--orange); color: #1a1000; }
+  .deal.mystery .price { border-color: #2a3a55; }
+  .deal.mystery .price .blur { color: var(--board-text); }
+
+  /* Deposit */
+  .deposit { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); color: #fff; }
+  .deposit-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
+  .deposit .eyebrow { color: #ffd39a; }
+  .deposit .sub { color: #d6e4fb; }
+  .ticket {
+    background: #fff; color: var(--ink); border-radius: 16px; padding: 24px;
+    position: relative;
+    -webkit-mask: radial-gradient(14px at 0 50%, #0000 98%, #000) left, radial-gradient(14px at 100% 50%, #0000 98%, #000) right;
+    -webkit-mask-size: 51% 100%; -webkit-mask-repeat: no-repeat;
+    mask: radial-gradient(14px at 0 50%, #0000 98%, #000) left, radial-gradient(14px at 100% 50%, #0000 98%, #000) right;
+    mask-size: 51% 100%; mask-repeat: no-repeat;
+  }
+  .ticket .amount { font-size: 3rem; font-weight: 800; color: var(--orange-dark); line-height: 1; }
+  .ticket .amount small { font-size: 1.1rem; color: var(--muted); font-weight: 700; }
+  .ticket ul { list-style: none; padding: 0; margin: 16px 0 0; }
+  .ticket li { padding: 6px 0; border-top: 1px dashed var(--line); }
+  .ticket li::before { content: "✓ "; color: var(--green); font-weight: 800; }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; counter-reset: s; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .step::before {
+    counter-increment: s; content: counter(s);
+    display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+    background: var(--orange); color: #fff; font-weight: 800; margin-bottom: 10px;
+  }
+  .step h3 { margin: 0 0 4px; font-size: 1.1rem; }
+  .step p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+  /* Form */
+  .register { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .form-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; align-items: start; }
+  .perks { list-style: none; padding: 0; margin: 0; }
+  .perks li { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .perks li span:first-child { font-size: 1.5rem; }
+  form.card { background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 24px; }
+  label { display: block; font-weight: 700; margin: 0 0 6px; font-size: .95rem; }
+  .field { margin-bottom: 16px; }
+  input[type=text], input[type=tel], select {
+    width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid #c9d5e6;
+    font: 500 1rem "Tajawal", sans-serif; background: #fff; color: var(--ink);
+  }
+  input:focus, select:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips label {
+    font-weight: 500; margin: 0; padding: 8px 14px; border-radius: 999px; border: 1px solid #c9d5e6;
+    background: #fff; cursor: pointer; user-select: none;
+  }
+  .chips input { position: absolute; opacity: 0; pointer-events: none; }
+  .chips input:checked + span { color: var(--blue); font-weight: 700; }
+  .chips label:has(input:checked) { border-color: var(--blue); background: #eaf2fd; }
+  .chips input:focus-visible + span { outline: 2px solid var(--blue); outline-offset: 4px; }
+  form .btn { width: 100%; font-size: 1.1rem; padding: 14px; }
+  .note { color: var(--muted); font-size: .85rem; margin: 10px 0 0; text-align: center; }
+  .error { color: #c0392b; font-size: .9rem; margin: 6px 0 0; display: none; }
+
+  /* FAQ */
+  details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { font-weight: 700; cursor: pointer; }
+  details p { margin: 8px 0 0; color: var(--muted); }
+
+  /* Footer */
+  footer { background: var(--navy); color: #c8d4e8; padding: 40px 0 28px; }
+  .foot { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .foot-brand { display: flex; align-items: center; gap: 16px; }
+  .foot-brand img { width: 84px; height: 84px; border-radius: 12px; }
+  .foot-brand strong { color: #fff; font-size: 1.2rem; display: block; }
+  .foot-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .legal { border-top: 1px solid #22314a; margin-top: 24px; padding-top: 16px; font-size: .85rem; color: #8fa1bf; }
+
+  /* Floating WhatsApp */
+  .wa-float {
+    position: fixed; left: 16px; bottom: 16px; z-index: 30;
+    width: 56px; height: 56px; border-radius: 50%; background: #25d366;
+    display: grid; place-items: center; box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    opacity: 0; transform: scale(.6); pointer-events: none; transition: opacity .2s, transform .2s;
+  }
+  .wa-float.show { opacity: 1; transform: none; pointer-events: auto; }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+
+  @media (max-width: 820px) {
+    .deposit-grid, .form-grid { grid-template-columns: 1fr; }
+    .board-table th.hide-sm, .board-table td.hide-sm { display: none; }
+  }
+  @media (max-width: 480px) {
+    header.top img { height: 36px; }
+    .countdown div { min-width: 0; flex: 1; }
+    .countdown b { font-size: 1.6rem; }
+    .board-table td, .board-table th { padding: 10px 8px; font-size: .9rem; }
+    .hero-ctas .btn { flex: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#"><img src="assets/onlinersv-logo.png" alt="onlinersv.com"></a>
+    <a class="btn btn-orange btn-sm" href="#register">احجز مقعدك</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="live-pill"><i></i> بث مباشر على فيسبوك</span>
+    <h1>بوابة الإقلاع ✈️<br><span>عروض ما تتكرر… لمدة ساعة وحدة</span></h1>
+    <p class="lead">باكجات عمرة، فنادق، تذاكر طيران ورحلات سياحية بأسعار حصرية للي يحضر البث. كل عرض له بوابة، تنفتح دقايق وتتسكّر.</p>
+
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div><b id="cd-days">00</b><small>يوم</small></div>
+      <div><b id="cd-hours">00</b><small>ساعة</small></div>
+      <div><b id="cd-mins">00</b><small>دقيقة</small></div>
+      <div><b id="cd-secs">00</b><small>ثانية</small></div>
+    </div>
+    <p class="when">موعد الإقلاع: <strong id="live-date"></strong></p>
+
+    <div class="hero-ctas">
+      <a class="btn btn-orange" href="#register">سجّل واحصل على وصول مبكر</a>
+      <a class="btn btn-ghost" id="fb-link" href="#" target="_blank" rel="noopener">تابعنا على فيسبوك</a>
+    </div>
+
+    <div class="board" role="region" aria-label="جدول العروض">
+      <div class="board-head"><span>🛫 المغادرة — Departures</span><span id="board-clock">--:--</span></div>
+      <table class="board-table">
+        <thead><tr><th>البوابة</th><th>العرض</th><th class="hide-sm">موعد الفتح</th><th>الحالة</th></tr></thead>
+        <tbody>
+          <tr><td class="gate">G1</td><td>الوجهة الغامضة 🌍</td><td class="time hide-sm">+00:05</td><td><span class="status soon">قريباً</span></td></tr>
+          <tr><td class="gate">G2</td><td>تذاكر بمقاعد محدودة ✈️</td><td class="time hide-sm">+00:15</td><td><span class="status soon">قريباً</span></td></tr>
+          <tr><td class="gate">G3</td><td>الليلة الرابعة علينا 🏨</td><td class="time hide-sm">+00:35</td><td><span class="status locked">مقفلة</span></td></tr>
+          <tr><td class="gate">G4</td><td>عمرة رمضان المبكرة 🕋</td><td class="time hide-sm">+00:45</td><td><span class="status locked">مقفلة</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="deals">
+  <div class="wrap">
+    <div class="eyebrow">العروض</div>
+    <h2>أربع بوابات… وكل وحدة لها مفاجأة</h2>
+    <p class="sub">الأسعار تنكشف في البث بس. المسجّلين يوصلهم كل عرض قبل الناس بـ ٥ دقايق.</p>
+
+    <div class="deals">
+      <article class="deal umrah">
+        <span class="gate-tag">GATE 4</span>
+        <div class="icon">🕋</div>
+        <h3>عمرة رمضان المبكرة</h3>
+        <p>ثبّت مكانك قبل الزحمة بسعر البث.</p>
+        <ul>
+          <li>فنادق قريبة من الحرم</li>
+          <li>نقل مريح ومرشد مرافق</li>
+          <li>باكج عائلي: الطفل الثالث مجاناً</li>
+        </ul>
+        <div class="price"><span class="blur">0,000 ر.س</span><small>يُعلن في البث</small></div>
+      </article>
+
+      <article class="deal">
+        <span class="gate-tag">GATE 3</span>
+        <div class="icon">🏨</div>
+        <h3>الليلة الرابعة علينا</h3>
+        <p>احجز ٣ ليالي والرابعة هدية، أو ترقية مجانية للغرفة.</p>
+        <ul>
+          <li>فنادق مختارة داخل وخارج المملكة</li>
+          <li>إطلالات وترقيات حسب التوفر</li>
+        </ul>
+        <div class="price"><span class="blur">0,000 ر.س</span><small>يُعلن في البث</small></div>
+      </article>
+
+      <article class="deal">
+        <span class="gate-tag">GATE 2</span>
+        <div class="icon">✈️</div>
+        <h3>تذاكر بمقاعد محدودة</h3>
+        <p>أسعار خاصة على وجهات مختارة، والمقاعد تنعدّ قدامك على الشاشة.</p>
+        <ul>
+          <li>وجهات الإجازة الأكثر طلباً</li>
+          <li>العدد محدود، واللي يسبق يحجز</li>
+        </ul>
+        <div class="price"><span class="blur">0,000 ر.س</span><small>يُعلن في البث</small></div>
+      </article>
+
+      <article class="deal mystery">
+        <span class="gate-tag">GATE 1</span>
+        <div class="icon">🌍</div>
+        <h3>الوجهة الغامضة</h3>
+        <p>رحلة سياحية كاملة. تلميحات طول البث، والكشف في آخر دقايق.</p>
+        <ul>
+          <li>طيران + فندق + جولات</li>
+          <li>البوابة تنفتح ١٠ دقايق بس بعد الكشف</li>
+        </ul>
+        <div class="price"><span class="blur">0,000 ر.س</span><small>؟؟؟</small></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="deposit">
+  <div class="wrap deposit-grid">
+    <div>
+      <div class="eyebrow">ثبّت سعرك</div>
+      <h2>احجز السعر بعربون… وكمّل براحتك</h2>
+      <p class="sub">نعرف إن قرار السفر يبغى له شورى مع العائلة. ادفع <span class="deposit-pct">18</span>٪ بس كعربون في البث، وسعر العرض يبقى محجوز لك.</p>
+      <a class="btn btn-orange" href="#register">أبغى أثبّت سعري</a>
+    </div>
+    <div class="ticket">
+      <div class="amount"><span class="deposit-pct">18</span>٪ <small>عربون من قيمة الحجز</small></div>
+      <ul>
+        <li>تكمّل الدفع خلال <span id="deposit-days">7</span> أيام</li>
+        <li>تقسيط متاح</li>
+        <li>لو ما كمّلت، العربون يرجع لك أو يصير رصيد</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">كيف تستفيد</div>
+    <h2>أربع خطوات وتكون على الطيارة</h2>
+    <div class="steps">
+      <div class="step"><h3>سجّل هنا</h3><p>نضيفك لقائمة الوصول المبكر ونذكّرك على واتساب.</p></div>
+      <div class="step"><h3>احضر البث</h3><p>على صفحتنا في فيسبوك، والعروض تنكشف وحدة وحدة.</p></div>
+      <div class="step"><h3>اكتب كلمة العرض</h3><p>في التعليقات أو واتساب، وفريقنا يتواصل معك فوراً.</p></div>
+      <div class="step"><h3>ثبّت بالعربون</h3><p>السعر لك، والباقي تكمّله براحتك.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="register" id="register">
+  <div class="wrap form-grid">
+    <div>
+      <div class="eyebrow">قائمة الوصول المبكر</div>
+      <h2>خذ مكانك قبل ما تنفتح البوابات</h2>
+      <ul class="perks">
+        <li><span>⏱️</span><span><strong>٥ دقايق قبل الناس</strong><br>يوصلك كل عرض قبل ما ينعلن في البث.</span></li>
+        <li><span>🔔</span><span><strong>تذكير على واتساب</strong><br>قبل البث بساعة، وقبله بعشر دقايق.</span></li>
+        <li><span>🎁</span><span><strong>كود خاص للمسجّلين</strong><br>خصم إضافي ما يحصل عليه إلا المسجّلين.</span></li>
+      </ul>
+    </div>
+
+    <form class="card" id="lead-form" novalidate>
+      <div class="field">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" name="name" autocomplete="name" required placeholder="مثال: محمد عبدالله">
+      </div>
+      <div class="field">
+        <label for="phone">رقم الجوال (واتساب)</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" dir="ltr" required placeholder="05xxxxxxxx">
+      </div>
+      <div class="field">
+        <label for="city">المدينة</label>
+        <select id="city" name="city">
+          <option>الرياض</option><option>جدة</option><option>مكة المكرمة</option><option>المدينة المنورة</option>
+          <option>الدمام / الخبر</option><option>القصيم</option><option>أبها / خميس مشيط</option><option>أخرى</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>وش يهمك؟</label>
+        <div class="chips">
+          <label><input type="checkbox" name="interest" value="عمرة"><span>🕋 عمرة</span></label>
+          <label><input type="checkbox" name="interest" value="فنادق"><span>🏨 فنادق</span></label>
+          <label><input type="checkbox" name="interest" value="تذاكر"><span>✈️ تذاكر</span></label>
+          <label><input type="checkbox" name="interest" value="رحلات سياحية"><span>🌍 رحلات</span></label>
+        </div>
+      </div>
+      <button class="btn btn-orange" type="submit">سجّلني في بوابة الإقلاع</button>
+      <p class="error" id="form-error">فضلاً اكتب الاسم ورقم جوال صحيح.</p>
+      <p class="note">بيفتح لك واتساب برسالة جاهزة، اضغط إرسال وتم تسجيلك ✅</p>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">أسئلة متكررة</div>
+    <h2>قبل الإقلاع</h2>
+    <details><summary>وين يكون البث؟</summary><p>على صفحتنا في فيسبوك. سجّل هنا ونرسل لك الرابط على واتساب قبل البداية.</p></details>
+    <details><summary>هل الأسعار شاملة الضريبة؟</summary><p>نعم، كل الأسعار المعلنة في البث شاملة ضريبة القيمة المضافة.</p></details>
+    <details><summary>وش يصير لو ما كمّلت الدفع بعد العربون؟</summary><p>العربون يرجع لك أو يتحوّل لرصيد تستخدمه في أي حجز ثاني، حسب الشروط المعلنة مع كل عرض.</p></details>
+    <details><summary>فاتني البث، أقدر أستفيد؟</summary><p>بعد البث فيه عرض إعادة لمدة ٢٤ ساعة بخصم أقل. المسجّلين يوصلهم أولاً.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="foot-brand">
+        <img src="assets/fakhama-logo.png" alt="شعار فخامة البراء">
+        <div>
+          <strong>فخامة البراء</strong>
+          منصة الحجز: onlinersv.com<br>Travel more, worry less
+        </div>
+      </div>
+      <div class="foot-links">
+        <a class="btn btn-blue btn-sm" id="fb-link-2" href="#" target="_blank" rel="noopener">فيسبوك</a>
+        <a class="btn btn-orange btn-sm" id="wa-link" href="#" target="_blank" rel="noopener">واتساب الحجز</a>
+        <a class="btn btn-ghost btn-sm" href="https://onlinersv.com" target="_blank" rel="noopener">onlinersv.com</a>
+      </div>
+    </div>
+    <div class="legal">© <span id="year"></span> فخامة البراء. العروض لفترة البث وحسب التوفر، والشروط والأحكام تنطبق على كل عرض.</div>
+  </div>
+</footer>
+
+<a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="تواصل معنا على واتساب">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.1 6.4 6.5 2 12 2a9.9 9.9 0 0 1 9.9 9.9c0 5.5-4.4 9.9-9.9 9.9zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.6-.3z"/></svg>
+</a>
+
+<script>
+  // ===== الإعدادات: عدّلوا هذي القيم فقط =====
+  const CONFIG = {
+    liveDate: "2026-11-01T16:00:00+03:00",          // موعد البث (بتوقيت السعودية)
+    whatsapp: "966505557966",                        // رقم واتساب الحجز بالصيغة الدولية بدون + أو أصفار
+    facebook: "https://www.facebook.com/share/1DqqwzgkTK/", // رابط صفحة فيسبوك
+    depositAmount: 18,                               // نسبة العربون من قيمة الحجز (٪)
+    depositDays: 7                                   // مدة إكمال الدفع بالأيام
+  };
+  // ==========================================
+
+  const liveAt = new Date(CONFIG.liveDate);
+  const waBase = "https://wa.me/" + CONFIG.whatsapp;
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.querySelectorAll(".deposit-pct").forEach(el => el.textContent = CONFIG.depositAmount);
+  document.getElementById("deposit-days").textContent = CONFIG.depositDays;
+  ["fb-link", "fb-link-2"].forEach(id => document.getElementById(id).href = CONFIG.facebook);
+  const waGeneral = waBase + "?text=" + encodeURIComponent("السلام عليكم، أبغى أستفسر عن عروض بوابة الإقلاع");
+  ["wa-link", "wa-float"].forEach(id => document.getElementById(id).href = waGeneral);
+
+  document.getElementById("live-date").textContent = liveAt.toLocaleString("ar-SA-u-ca-gregory-nu-latn", {
+    weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "2-digit",
+    timeZone: "Asia/Riyadh"
+  }) + " (بتوقيت السعودية)";
+
+  const pad = n => String(n).padStart(2, "0");
+  function tick() {
+    let diff = Math.max(0, liveAt - Date.now());
+    const d = Math.floor(diff / 864e5); diff -= d * 864e5;
+    const h = Math.floor(diff / 36e5);  diff -= h * 36e5;
+    const m = Math.floor(diff / 6e4);   diff -= m * 6e4;
+    const s = Math.floor(diff / 1e3);
+    document.getElementById("cd-days").textContent = pad(d);
+    document.getElementById("cd-hours").textContent = pad(h);
+    document.getElementById("cd-mins").textContent = pad(m);
+    document.getElementById("cd-secs").textContent = pad(s);
+    document.getElementById("board-clock").textContent = new Date().toLocaleTimeString("en-GB", {
+      hour: "2-digit", minute: "2-digit", timeZone: "Asia/Riyadh"
+    }) + " RUH";
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // زر واتساب العائم يظهر بعد ما ينزل الزائر عن الواجهة، عشان ما يغطي العدّاد
+  const waFloat = document.getElementById("wa-float");
+  new IntersectionObserver(([e]) => waFloat.classList.toggle("show", !e.isIntersecting))
+    .observe(document.getElementById("countdown"));
+
+  document.getElementById("lead-form").addEventListener("submit", e => {
+    e.preventDefault();
+    const f = e.target;
+    const name = f.name.value.trim();
+    const phone = f.phone.value.replace(/[^\d+]/g, "");
+    const err = document.getElementById("form-error");
+    if (!name || phone.replace(/\D/g, "").length < 9) { err.style.display = "block"; return; }
+    err.style.display = "none";
+    const interests = [...f.querySelectorAll("input[name=interest]:checked")].map(i => i.value);
+    const msg = [
+      "✈️ تسجيل في بوابة الإقلاع",
+      "الاسم: " + name,
+      "الجوال: " + phone,
+      "المدينة: " + f.city.value,
+      "الاهتمام: " + (interests.length ? interests.join("، ") : "كل العروض")
+    ].join("\n");
+    if (typeof fbq === "function") fbq("track", "Lead");
+    window.open(waBase + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>
