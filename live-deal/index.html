@@ -363,11 +363,11 @@
     <div>
       <div class="eyebrow">ثبّت سعرك</div>
       <h2>احجز السعر بعربون… وكمّل براحتك</h2>
-      <p class="sub">نعرف إن قرار السفر يبغى له شورى مع العائلة. ادفع عربون رمزي في البث، وسعر العرض يبقى محجوز لك.</p>
+      <p class="sub">نعرف إن قرار السفر يبغى له شورى مع العائلة. ادفع <span class="deposit-pct">18</span>٪ بس كعربون في البث، وسعر العرض يبقى محجوز لك.</p>
       <a class="btn btn-orange" href="#register">أبغى أثبّت سعري</a>
     </div>
     <div class="ticket">
-      <div class="amount"><span id="deposit-amount">299</span> <small>ر.س عربون</small></div>
+      <div class="amount"><span class="deposit-pct">18</span>٪ <small>عربون من قيمة الحجز</small></div>
       <ul>
         <li>تكمّل الدفع خلال <span id="deposit-days">7</span> أيام</li>
         <li>تقسيط متاح</li>
@@ -475,7 +475,7 @@
     liveDate: "2026-11-01T16:00:00+03:00",          // موعد البث (بتوقيت السعودية)
     whatsapp: "966505557966",                        // رقم واتساب الحجز بالصيغة الدولية بدون + أو أصفار
     facebook: "https://www.facebook.com/share/1DqqwzgkTK/", // رابط صفحة فيسبوك
-    depositAmount: 299,                              // قيمة العربون بالريال
+    depositAmount: 18,                               // نسبة العربون من قيمة الحجز (٪)
     depositDays: 7                                   // مدة إكمال الدفع بالأيام
   };
   // ==========================================
@@ -484,7 +484,7 @@
   const waBase = "https://wa.me/" + CONFIG.whatsapp;
 
   document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("deposit-amount").textContent = CONFIG.depositAmount;
+  document.querySelectorAll(".deposit-pct").forEach(el => el.textContent = CONFIG.depositAmount);
   document.getElementById("deposit-days").textContent = CONFIG.depositDays;
   ["fb-link", "fb-link-2"].forEach(id => document.getElementById(id).href = CONFIG.facebook);
   const waGeneral = waBase + "?text=" + encodeURIComponent("السلام عليكم، أبغى أستفسر عن عروض بوابة الإقلاع");
