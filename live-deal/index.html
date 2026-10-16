@@ -237,7 +237,9 @@
     position: fixed; left: 16px; bottom: 16px; z-index: 30;
     width: 56px; height: 56px; border-radius: 50%; background: #25d366;
     display: grid; place-items: center; box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    opacity: 0; transform: scale(.6); pointer-events: none; transition: opacity .2s, transform .2s;
   }
+  .wa-float.show { opacity: 1; transform: none; pointer-events: auto; }
   .wa-float svg { width: 30px; height: 30px; fill: #fff; }
 
   @media (max-width: 820px) {
@@ -512,6 +514,11 @@
   }
   tick();
   setInterval(tick, 1000);
+
+  // زر واتساب العائم يظهر بعد ما ينزل الزائر عن الواجهة، عشان ما يغطي العدّاد
+  const waFloat = document.getElementById("wa-float");
+  new IntersectionObserver(([e]) => waFloat.classList.toggle("show", !e.isIntersecting))
+    .observe(document.getElementById("countdown"));
 
   document.getElementById("lead-form").addEventListener("submit", e => {
     e.preventDefault();
